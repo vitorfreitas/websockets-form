@@ -1,0 +1,114 @@
+<section class="section">
+  <button
+    mat-raised-button
+    color="primary"
+    class="share-link"
+    (click)="copyLink()"
+  >COMPARTILHAR LINK DO FORMULARIO</button>
+
+  <mat-card>
+    <mat-card-content>
+      <label id="season-label">Políticas institucionais no âmbito do curso</label>
+      <mat-radio-group
+        aria-labelledby="season-label"
+        class="radio-group"
+        color="primary"
+        (change)="sendMessage('season', $event.value)"
+        [value]="season"
+      >
+        <mat-radio-button class="radio-button" value="1">
+          As políticas institucionais de ensino, extensão e pesquisa (quando for o caso),
+          constantes no PDI, não estão previstas no âmbito do curso.
+        </mat-radio-button>
+        <mat-radio-button class="radio-button" value="2">
+          As políticas institucionais de ensino, extensão e pesquisa (quando for o caso),
+          constantes no PDI, estão previstas no âmbito do curso de maneira limitada
+        </mat-radio-button>
+        <mat-radio-button class="radio-button" value="3">
+          As políticas institucionais de ensino, extensão e pesquisa (quando for o caso),
+          constantes no PDI, estão previstas no âmbito do curso.
+        </mat-radio-button>
+        <mat-radio-button class="radio-button" value="4">
+          As políticas institucionais de ensino, extensão e pesquisa (quando for o caso),
+          constantes no PDI, estão previstas no âmbito do curso e claramente voltadas
+          para a promoção de oportunidades de aprendizagem alinhadas ao perfil do egresso.
+        </mat-radio-button>
+        <mat-radio-button class="radio-button" value="5">
+          As políticas institucionais de ensino, extensão e pesquisa (quando for o caso),
+          constantes no PDI, estão previstas no âmbito do curso e claramente voltadas
+          para a promoção de oportunidades de aprendizagem alinhadas ao perfil do
+          egresso, pressupondo-se práticas exitosas ou inovadoras para a sua revisão.
+        </mat-radio-button>
+      </mat-radio-group>
+
+      <label id="food-label">Objetivos do curso</label>
+      <mat-radio-group
+        aria-labelledby="food-label"
+        class="radio-group"
+        color="primary"
+      >
+        <mat-radio-button class="radio-button" value="1">
+          Os objetivos do curso não estão previstos no PPC, considerando o perfil
+          profissional do egresso, a estrutura curricular e o contexto educacional.
+        </mat-radio-button>
+        <mat-radio-button class="radio-button" value="2">
+          Os objetivos do curso estão previstos no PPC de maneira limitada, considerando
+          o perfil profissional do egresso, a estrutura curricular e o contexto educacional.
+        </mat-radio-button>
+        <mat-radio-button class="radio-button" value="3">
+          Os objetivos do curso estão previstos no PPC, considerando o perfil profissional
+          do egresso, a estrutura curricular e o contexto educacional.
+        </mat-radio-button>
+        <mat-radio-button class="radio-button" value="4">
+          Os objetivos do curso estão previstos no PPC, considerando o perfil profissional
+          do egresso, a estrutura curricular, o contexto educacional e características locais
+          e regionais.
+        </mat-radio-button>
+        <mat-radio-button class="radio-button" value="5">
+          Os objetivos do curso estão previstos no PPC, considerando o perfil profissional
+          do egresso, a estrutura curricular, o contexto educacional, características
+          locais e regionais e novas práticas emergentes no campo do conhecimento
+          relacionado ao curso.
+        </mat-radio-button>
+      </mat-radio-group>
+
+      <label id="place-label">Perfil profissional do egresso</label>
+      <mat-radio-group
+        aria-labelledby="place-label"
+        class="radio-group"
+        color="primary"
+      >
+        <mat-radio-button class="radio-button" value="1">
+          O perfil profissional do egresso não está previsto no PPC.
+        </mat-radio-button>
+        <mat-radio-button class="radio-button" value="2">
+          O perfil profissional do egresso está previsto no PPC, mas não está de acordo
+          com as DCN (quando houver) ou não expressa as competências a serem
+          desenvolvidas pelo discente.
+        </mat-radio-button>
+        <mat-radio-button class="radio-button" value="3">
+          O perfil profissional do egresso está previsto no PPC, está de acordo com as
+          DCN (quando houver) e expressa as competências a serem desenvolvidas pelo
+          discente.
+        </mat-radio-button>
+        <mat-radio-button class="radio-button" value="4">
+          O perfil profissional do egresso está previsto no PPC, está de acordo com as
+          DCN (quando houver), expressa as competências a serem desenvolvidas pelo
+          discente e as articula com necessidades locais e regionais.
+        </mat-radio-button>
+        <mat-radio-button class="radio-button" value="5">
+          O perfil profissional do egresso está previsto no PPC, está de acordo com as
+          DCN (quando houver), expressa as competências a serem desenvolvidas
+          pelo discente e as articula com necessidades locais e regionais, havendo
+          planejamento para sua ampliação em função de novas demandas apresentadas
+          pelo mundo do trabalho.
+        </mat-radio-button>
+      </mat-radio-group>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button mat-button>CANCELAR</button>
+      <button mat-button color="primary" (click)="submit()">SALVAR</button>
+    </mat-card-actions>
+  </mat-card>
+</section>
