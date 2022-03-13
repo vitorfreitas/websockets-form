@@ -46,6 +46,8 @@
         aria-labelledby="food-label"
         class="radio-group"
         color="primary"
+        (change)="sendMessage('food', $event.value)"
+        [value]="food"
       >
         <mat-radio-button class="radio-button" value="1">
           Os objetivos do curso não estão previstos no PPC, considerando o perfil
@@ -77,6 +79,8 @@
         aria-labelledby="place-label"
         class="radio-group"
         color="primary"
+        (change)="sendMessage('place', $event.value)"
+        [value]="place"
       >
         <mat-radio-button class="radio-button" value="1">
           O perfil profissional do egresso não está previsto no PPC.
